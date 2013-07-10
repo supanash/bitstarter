@@ -4,7 +4,7 @@ var fs = require("fs");
 var app = express.createServer(express.logger());
 var message = ""
 
-fs.readFileSync('index.html', function (err, data) {
+fs.readFileSync('index.html', 'utf8', function (err, data) {
   if (err) throw err;
   message = data.toString();
 });
