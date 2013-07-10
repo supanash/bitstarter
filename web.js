@@ -7,6 +7,8 @@ var message = ""
 fs.readFileSync('__dirname/index.html', 'utf8', function (err, data) {
   if (err) throw err;
   message = data.toString();
+  console.log(__dirname);
+  console.log(message);
 });
 
 app.get('/', function(request, response) {
